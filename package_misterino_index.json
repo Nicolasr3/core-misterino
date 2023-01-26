@@ -1,0 +1,67 @@
+{
+  "packages":
+  [
+    {
+      "name": "misterino",
+      "maintainer": "Mister",
+      "websiteURL": "http://www.arduino.cc/en/Reference/HomePage",
+      "help":
+      {
+        "online": "http://www.arduino.cc/en/Reference/HomePage"
+      },
+      "platforms":
+      [
+        {
+          "name": "Misterino ZERO",
+          "architecture": "samd",
+          "version": "2023.1.26",
+          "category": "Contributed",
+          "url": "https://github.com/Nicolasr3/package_misterino/raw/main/misterino-2023.1.26.zip",
+          "archiveFileName": "misterino-2023.1.26.zip",
+          "checksum": "SHA-256:c8bebe93e9fffd34a53843a542e7c85dd977d3d291b6cd324e1e4d0d51ff78ef",
+          "size": "4642635",
+          "boards": [
+            {
+              "name": "Misterino Zero (Native USB Port)"
+            }       
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "7-2017q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0-arduino3"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.5.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.1"
+            }
+          ]
+        }
+      ],
+      "tools":
+      [
+      ]
+    }
+  ]
+}
