@@ -59,4 +59,4 @@ misterino_zero.build.vid=0x2341
 misterino_zero.build.pid=0x804d
 misterino_zero.bootloader.tool=openocd
 misterino_zero.bootloader.tool.default=openocd
-misterino_zero.bootloader.file=misterino_zero/samd21_sam_ba_misterino_zero.bin
+misterino_zero.bootloader.file=zero/samd21_sam_ba.bin
