@@ -18,8 +18,8 @@
           "category": "Contributed",
           "url": "https://github.com/Nicolasr3/core-misterino/raw/main/samd/1.0.0.zip",
           "archiveFileName": "1.0.0.zip",
-          "checksum": "SHA-256:28c915fd7328aac0940ff711629cbf25ad0a7485bacc64a12b2edcb983097035",
-          "size": "4637122",
+          "checksum": "SHA-256:b45e1d521ea690b9a0d86e8c1c144719aeaa9d8f9ac4bc7dc3067e9b0dbc40bf",
+          "size": "4637121",
           "boards": [
             {
               "name": "Misterino Zero (Native USB Port)"
