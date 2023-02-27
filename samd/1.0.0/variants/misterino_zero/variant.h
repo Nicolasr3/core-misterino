@@ -82,18 +82,18 @@ extern "C" unsigned int PINCOUNT_fn();
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define PIN_LED_20           (20u)
-#define PIN_LED              PIN_LED_20
-#define LED_BUILTIN          PIN_LED_20
+#define PIN_LED_16           (16u)
+#define PIN_LED              PIN_LED_16
+#define LED_BUILTIN          PIN_LED_16
 
 /*
  * Analog pins
  */
-#define PIN_A0               (10ul)
-#define PIN_A1               (11ul)
-#define PIN_A2               (12ul)
-#define PIN_A3               (13ul)
-#define PIN_DAC0             (10ul)
+#define PIN_A0               ( 7ul)
+#define PIN_A1               ( 8ul)
+#define PIN_A2               ( 9ul)
+#define PIN_A3               (10ul)
+#define PIN_DAC0             ( 7ul)
 
 static const uint8_t A0   = PIN_A0;
 static const uint8_t A1   = PIN_A1;
@@ -116,9 +116,9 @@ static const uint8_t DAC0 = PIN_DAC0;
  */
 #define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MISO         (16u)
-#define PIN_SPI_MOSI         (17u)
-#define PIN_SPI_SCK          (18u)
+#define PIN_SPI_MISO         (13u)
+#define PIN_SPI_MOSI         (14u)
+#define PIN_SPI_SCK          (15u)
 #define PERIPH_SPI           sercom1
 #define PAD_SPI_TX           SPI_PAD_2_SCK_3
 #define PAD_SPI_RX           SERCOM_RX_PAD_0
@@ -134,8 +134,8 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (14u)
-#define PIN_WIRE_SCL         (15u)
+#define PIN_WIRE_SDA         (11u)
+#define PIN_WIRE_SCL         (12u)
 #define PERIPH_WIRE          sercom0
 #define WIRE_IT_HANDLER      SERCOM0_Handler
 
@@ -145,9 +145,9 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (20ul)
-#define PIN_USB_DM          (21ul)
-#define PIN_USB_DP          (22ul)
+#define PIN_USB_HOST_ENABLE (16ul)
+#define PIN_USB_DM          (17ul)
+#define PIN_USB_DP          (18ul)
 
 /*
  * I2S Interfaces
@@ -181,7 +181,7 @@ extern SERCOM sercom3;
 //extern SERCOM sercom4;
 //extern SERCOM sercom5;
 
-extern Uart Serial;
+//extern Uart Serial;
 extern Uart Serial1;
 
 #endif
