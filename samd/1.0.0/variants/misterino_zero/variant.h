@@ -59,8 +59,8 @@ extern "C"
 extern "C" unsigned int PINCOUNT_fn();
 #endif
 #define PINS_COUNT           (PINCOUNT_fn())
-#define NUM_DIGITAL_PINS     (10u)
-#define NUM_ANALOG_INPUTS    (4u)
+#define NUM_DIGITAL_PINS     (12u)
+#define NUM_ANALOG_INPUTS    (5u)
 #define NUM_ANALOG_OUTPUTS   (1u)
 #define analogInputToDigitalPin(p)  ((p < 6u) ? (p) + 14u : -1)
 
@@ -82,23 +82,25 @@ extern "C" unsigned int PINCOUNT_fn();
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define PIN_LED_16           (16u)
-#define PIN_LED              PIN_LED_16
-#define LED_BUILTIN          PIN_LED_16
+#define PIN_LED_17           (17u)
+#define PIN_LED              PIN_LED_17
+#define LED_BUILTIN          PIN_LED_17
 
 /*
  * Analog pins
  */
-#define PIN_A0               ( 7ul)
-#define PIN_A1               ( 8ul)
-#define PIN_A2               ( 9ul)
-#define PIN_A3               (10ul)
-#define PIN_DAC0             ( 7ul)
+#define PIN_A0               (12ul)
+#define PIN_A1               (13ul)
+#define PIN_A2               (14ul)
+#define PIN_A3               (15ul)
+#define PIN_A4               (16ul)
+#define PIN_DAC0             (12ul)
 
 static const uint8_t A0   = PIN_A0;
 static const uint8_t A1   = PIN_A1;
 static const uint8_t A2   = PIN_A2;
 static const uint8_t A3   = PIN_A3;
+static const uint8_t A4   = PIN_A4;
 static const uint8_t DAC0 = PIN_DAC0;
 #define ADC_RESOLUTION		10
 
@@ -116,16 +118,17 @@ static const uint8_t DAC0 = PIN_DAC0;
  */
 #define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MISO         (13u)
-#define PIN_SPI_MOSI         (14u)
-#define PIN_SPI_SCK          (15u)
+#define PIN_SPI_MISO         (9u)
+#define PIN_SPI_MOSI         (10u)
+#define PIN_SPI_SCK          (11u)
+#define PIN_SPI_SS           (5u)
 #define PERIPH_SPI           sercom1
 #define PAD_SPI_TX           SPI_PAD_2_SCK_3
 #define PAD_SPI_RX           SERCOM_RX_PAD_0
 
-static const uint8_t SS	  = PIN_A2 ;	// SERCOM4 last PAD is present on A2 but HW SS isn't used. Set here only for reference.
-static const uint8_t MOSI = PIN_SPI_MOSI ;
-static const uint8_t MISO = PIN_SPI_MISO ;
+static const uint8_t SS	  = PIN_SPI_SS  ;	// SERCOM1 last PAD[3] is present on PA19 (but HW SS isn't used. Set here only for reference).
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK ;
 
 
@@ -134,8 +137,8 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (11u)
-#define PIN_WIRE_SCL         (12u)
+#define PIN_WIRE_SDA         (7u)
+#define PIN_WIRE_SCL         (8u)
 #define PERIPH_WIRE          sercom0
 #define WIRE_IT_HANDLER      SERCOM0_Handler
 
@@ -145,20 +148,10 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (16ul)
-#define PIN_USB_DM          (17ul)
-#define PIN_USB_DP          (18ul)
+#define PIN_USB_HOST_ENABLE (18ul)
+#define PIN_USB_DM          (19ul)
+#define PIN_USB_DP          (20ul)
 
-/*
- * I2S Interfaces
- */
-//#define I2S_INTERFACES_COUNT 1
-//
-//#define I2S_DEVICE          0
-//#define I2S_CLOCK_GENERATOR 3
-//#define PIN_I2S_SD          (7u)
-//#define PIN_I2S_SCK         (1u)
-//#define PIN_I2S_FS          (0u)
 
 #ifdef __cplusplus
 }
@@ -178,10 +171,7 @@ extern SERCOM sercom0;
 extern SERCOM sercom1;
 extern SERCOM sercom2;
 extern SERCOM sercom3;
-//extern SERCOM sercom4;
-//extern SERCOM sercom5;
 
-//extern Uart Serial;
 extern Uart Serial1;
 
 #endif
